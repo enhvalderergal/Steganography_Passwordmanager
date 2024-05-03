@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Hello Extensions",
+    "description": "Best Extension",
+    "permissions": ["scripting", "activeTab"
+  ],
+    "version": "1.0",
+    "action": {
+      "default_popup": "main.html",
+      "default_icon": "logo.png"
+    },
+    "content_scripts": [{
+      "js": ["main.js", "steganography.js"], 
+      "css": ["Content.css"],
+      "matches": ["https://*/*"]
+     }],
+     
+     "web_accessible_resources": [
+      {
+        "resources": ["logo.png"], 
+        "matches": ["http://*/*", "https://*/*"]
+      }
+
+    ]
+    
+  
+    
+  }
+  
