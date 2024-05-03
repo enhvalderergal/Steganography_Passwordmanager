@@ -2,7 +2,7 @@ window.onload
 {
     //We make our arrays to manage allowed characters and generate the password
     const tegn = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m","Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Z", "X", "C", "V", "B", "N", "M", "!", "#", "%", "&", "/", "(", ")", "=", "?", "+", "@", "{", "[", "]", "}", "|", "~", "^", ",", ".", ";", ":", "-", "*", "'"];
-    const kode = [] 
+    kode = [] 
 
     //We set up what functions should run when the UI is interacted with
     document.getElementById("Decode").addEventListener("click", Find);
@@ -55,9 +55,16 @@ window.onload
             console.log(kode.length)
             Generate()
         }
-        console.log(kode.join("").toString())
-        //We print the generated password on the encode input
-        document.getElementById("Message").value = kode.join("").toString()
+
+        if (kode.length >= passwordlenght){
+            console.log(kode.join("").toString())
+            //We print the generated password on the encode input
+            document.getElementById("Message").value = kode.join("").toString()
+            kode = []
+            console.log("This is the array" + kode)
+        }
+
+       
     }
 
 };
