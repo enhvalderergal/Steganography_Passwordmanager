@@ -1,17 +1,17 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
-    "description": "Best Extension",
+    "name": "Pic Locker",
+    "description": "Most secure passwords ever",
     "permissions": ["scripting", "activeTab"
   ],
     "version": "1.0",
     "action": {
-      "default_popup": "main.html",
+      "default_popup": "menu.html",
       "default_icon": "logo.png"
     },
     "content_scripts": [{
-      "js": ["main.js", "steganography.js"], 
-      "css": ["Content.css"],
+      "js": ["JS/main.js", "JS/Libaries/steganography.js"], 
+      "css": ["CSS/Content.css"],
       "matches": ["https://*/*"]
      }],
      
