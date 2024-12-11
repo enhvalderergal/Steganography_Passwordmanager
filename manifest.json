@@ -4,7 +4,7 @@
     "description": "Most secure passwords ever",
     "permissions": ["scripting", "activeTab"
   ],
-    "version": "1.0",
+    "version": "2.0",
     "action": {
       "default_popup": "menu.html",
       "default_icon": "logo.png"
